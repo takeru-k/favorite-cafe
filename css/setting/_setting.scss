@@ -1,0 +1,38 @@
+/*---------------------------------
+
+  全体共通
+
+---------------------------------*/
+body{
+  font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+
+  color: #333;
+}
+
+.inner{
+  max-width: 1200px;
+  padding-right: 6%;
+  padding-left: 6%;
+  margin: 0 auto;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+li{
+  list-style: none;
+}
+
+$container_size: 1024px;
+
+$pc: $container_size;
+
+$mq_pc: 'screen and (min-width: #{$container_size})';
+$mq_tab: 'screen and (min-width: 481px)';
+$mq_sp: 'screen and (max-width: 480px)';
+
+$color-bg: #fbfbfb;
+
+$font: 'Barlow Condensed', sans-serif;

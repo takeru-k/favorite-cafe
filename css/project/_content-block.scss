@@ -1,0 +1,83 @@
+/*SPはttlの次に画像を表示*/
+.content-block__wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content-block{
+  display: contents;
+}
+
+.content-block__ttl,
+.content-block__img{
+  order: -1;
+}
+
+/*Tab、PCはflex表示に戻す*/
+@media #{$mq_tab}{
+  .content-block__wrapper{
+    flex-direction: row;
+  }
+
+  .content-block--reverse{
+    flex-direction: row-reverse;
+  }
+
+  .content-block{
+    display: initial;
+  }
+
+  .content-block__ttl,
+  .content-block__img{
+    order: initial;
+  }
+}
+
+/*余白設定*/
+.content-block__ttl{
+  font-size: 32px;
+  letter-spacing: .1em;
+  font-family: $font;
+}
+
+.content-block__txts{
+  line-height: 2;
+  text-align: justify;
+  padding-top: 16px;
+}
+
+.content-block__txt{
+  padding-bottom: 8px;
+}
+
+.content-block__btn{
+  padding-top: 32px;
+  margin: 0 auto;
+}
+
+.content-block__img{
+  padding-top: 4px;
+ 
+  img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+/*Tab、PCの余白設定*/
+@media #{$mq_tab}{
+  .content-block{
+    width: calc( 95% / 2);
+    margin: auto 0;
+  }
+
+  .content-block__img{
+    width: calc( 95% / 2);
+
+    img{
+      height: 350px;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.menu__list{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 18px;
+  padding-top: 8px;
+  
+
+  dt{
+    width: 70%;
+    padding-bottom: 12px;
+  }
+
+  dd{
+    width: 30%;
+    padding-bottom: 12px;
+    font-family: "sans-serif";
+  }
+
+}
+
+ /*スマホは画像を非表示*/
+.menu__img{
+  display: none;
+}
+
+
+ /*Tab、PCのデザイン設定*/
+ @media #{$mq_tab}{
+
+   .menu__img{
+     position: relative;
+     width: calc( 95% / 2);
+     display: block;
+
+     img{
+       width: 100%;
+       object-fit: cover;
+     }
+   }
+
+  .menu__ttl{
+    position: absolute;
+    top: 16px;
+    left: 10px;
+    font-size: 24px;
+    letter-spacing: .2em;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    width: 80%;
+  }
+
+   .menu__wrapper{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+   }
+
+   .menu__txts{
+     width: calc( 95% / 2);
+     padding-right: 10%;
+     padding-top: 15%;
+     background: none;
+   }
+
+
+ /*Tab、PCの背景設定*/
+  .menu__wrapper{
+   position: relative;
+
+    &:after{
+    position: absolute;
+    z-index: -1;
+    top: 20%;
+    right: 0;
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    content: "";
+    background: #f4f4f4;
+    }
+  }
+ }

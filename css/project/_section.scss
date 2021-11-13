@@ -1,0 +1,14 @@
+.section{
+  padding: 48px 0;
+}
+
+.section--background{
+  background: $color-bg;
+}
+
+ /*Tab、PCの余白設定*/
+@media #{$mq_tab}{
+  .section{
+    padding: 64px 0;
+  }
+}

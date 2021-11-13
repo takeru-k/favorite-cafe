@@ -1,0 +1,80 @@
+.selection__img{
+  position: relative;
+}
+
+.selection__ttl{
+  position: absolute;
+  top: 16px;
+  left: 10px;
+  font-size: 24px;
+  letter-spacing: .2em;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  width: 80%;
+  font-family: $font;
+}
+
+.selection__txts{
+  padding: 20px 16px;
+  line-height: 2;
+  background: #f4f4f4;
+  padding-bottom: 32px;
+}
+
+.selection__txt{
+  padding-bottom: 8px;
+}
+
+.selection__btn{
+  margin: 0 auto;
+  padding-top: 16px;
+  text-align: center;
+}
+
+ /*Tab、PCのデザイン設定*/
+ @media #{$mq_tab}{
+   .selection{
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-end;
+   }
+
+   .selection__img{
+     width: calc( 95% / 2);
+
+     img{
+       width: 100%;
+       object-fit: cover;
+     }
+   }
+
+   .selection__txts{
+     width: calc( 95% / 2);
+     padding-right: 10%;
+     padding-top: 15%;
+     background: none;
+   }
+
+   .selection__btn{
+     padding-top: 20%;
+     padding-bottom: 10%;
+   }
+
+  /*Tab、PCの背景設定*/
+  .selection{
+    position: relative;
+
+      &:after{
+      position: absolute;
+      z-index: -1;
+      top: 20%;
+      right: 0;
+      width: 80%;
+      height: 90%;
+      margin: auto;
+      content: "";
+      background: #f4f4f4;
+    }
+  }
+ }
+

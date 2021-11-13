@@ -1,0 +1,19 @@
+.btn{
+  background: #000;
+  color: #fff;
+  padding: 12px 48px 12px 40px;
+  display: inline-block;
+  position: relative;
+
+  /*矢印を表示*/
+  &:after{
+    content: "";
+    background: url("./../images/common/arrow.png") no-repeat center center/cover;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

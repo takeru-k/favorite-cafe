@@ -1,0 +1,33 @@
+.footer{
+  background: #8a8e97;
+  text-align: center;
+  padding: 24px 0;
+  color: #c0c5ce;
+  letter-spacing: .1em;
+  font-family: "barlow";
+}
+
+.footer__ttl{
+  font-size: 16px;
+}
+
+.footer__sns{
+  padding-top: 16px;
+
+  img{
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.footer__copy{
+  font-size: 12px;
+  padding-top: 16px;
+}
+
+ /*Tab、PCのデザイン設定*/
+ @media #{$mq_tab}{
+   .footer{
+     padding: 64px 0;
+   }
+ }
